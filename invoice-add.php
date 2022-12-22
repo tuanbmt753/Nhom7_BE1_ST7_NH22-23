@@ -46,4 +46,7 @@ if($sum != 0){
 
 	}
 }
+else{
+	header('location:checkout.php');
+}
 
