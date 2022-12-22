@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 02:21 PM
+-- Generation Time: Dec 22, 2022 at 01:58 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `nhom7`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice`
+--
+
+CREATE TABLE `invoice` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `country` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `tel` int(11) NOT NULL,
+  `cart` text COLLATE utf8_unicode_ci NOT NULL,
+  `sum` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `invoice`
+--
+
+INSERT INTO `invoice` (`id`, `name`, `email`, `address`, `country`, `tel`, `cart`, `sum`) VALUES
+(1, 'Tran Tuan', 'xuantuan@gmail.com', '123 Vo Van Ngan', 'Viet Nam', 359877356, '1x Apple Iphone 13 Pro 128G Silver<br>1x Tai nghe Sennheiser HDR165<br>1x Smart Tivi 4K Sony KD-85X86J 85 inch Google TV<br>1x Tivi Sony 32 inch 32R300E, HD Ready, MXR 100Hz<br>', 110820000),
+(2, 'Tran Tuan', 'xuantuan@gmail.com', '123 Vo Van Ngan', 'Viet Nam', 359877356, '1x Apple Iphone 13 Pro 128G Silver<br>1x Tai nghe Sennheiser HDR165<br>1x Smart Tivi 4K Sony KD-85X86J 85 inch Google TV<br>1x Tivi Sony 32 inch 32R300E, HD Ready, MXR 100Hz<br>', 110820000),
+(3, 'Tran Tuan', 'xuantuan@gmail.com', '123 Vo Van Ngan', 'Viet Nam', 359877356, '1x Smart Tivi 4K Sony KD-85X86J 85 inch Google TV<br>1x Tivi Sony 32 inch 32R300E, HD Ready, MXR 100Hz<br>', 83200000);
 
 -- --------------------------------------------------------
 
@@ -41,7 +67,8 @@ INSERT INTO `manufactures` (`manu_id`, `manu_name`) VALUES
 (2, 'Sennheiser'),
 (3, 'Apple'),
 (4, 'MSI'),
-(5, 'Logitech');
+(5, 'Logitech'),
+(10, 'Aregentina ');
 
 -- --------------------------------------------------------
 
@@ -116,7 +143,8 @@ INSERT INTO `protypes` (`type_id`, `type_name`) VALUES
 (2, 'Tai nghe'),
 (3, 'Smartphone'),
 (4, 'LapTop'),
-(5, 'Chuột');
+(5, 'Chuột'),
+(8, 'Ban phim');
 
 -- --------------------------------------------------------
 
@@ -138,11 +166,18 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `username`, `password`, `role_id`) VALUES
 (1, 'admin', '202cb962ac59075b964b07152d234b70', 1),
 (2, 'user1', '202cb962ac59075b964b07152d234b70', 2),
-(8, 'user2', '202cb962ac59075b964b07152d234b70', 2);
+(8, 'user2', '202cb962ac59075b964b07152d234b70', 2),
+(12, 'Hello a', '202cb962ac59075b964b07152d234b70', 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `invoice`
+--
+ALTER TABLE `invoice`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `manufactures`
@@ -173,10 +208,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `invoice`
+--
+ALTER TABLE `invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `manufactures`
 --
 ALTER TABLE `manufactures`
-  MODIFY `manu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `manu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -188,13 +229,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `protypes`
 --
 ALTER TABLE `protypes`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

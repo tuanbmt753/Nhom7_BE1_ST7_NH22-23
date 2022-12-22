@@ -275,52 +275,52 @@
 
 					<div class="col-md-7">
 						<!-- Billing Details -->
-						<div class="billing-details">
-							<div class="section-title">
-								<h3 class="title">Billing address</h3>
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="First Name">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="last-name" placeholder="Last Name">
-							</div>
-							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Email">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="Address">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="City">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="Country">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="tel" placeholder="Telephone">
-							</div>
-							<div class="form-group">
-								<div class="input-checkbox">
-									<input type="checkbox" id="create-account">
-									<label for="create-account">
-										<span></span>
-										Create Account?
-									</label>
-									<div class="caption">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										<input class="input" type="password" name="password" placeholder="Enter Your Password">
-									</div>
+						<form action="invoice-add.php" method="post">
+							<div class="billing-details">
+								<div class="section-title">
+									<h3 class="title">Billing address</h3>
 								</div>
+								<div class="form-group">
+									<input class="input" type="text" name="name" placeholder="Full Name">
+								</div>
+								<div class="form-group">
+									<input class="input" type="email" name="email" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input class="input" type="text" name="address" placeholder="Address">
+								</div>
+								<!-- <div class="form-group">
+									<input class="input" type="text" name="city" placeholder="City">
+								</div> -->
+								<div class="form-group">
+									<input class="input" type="text" name="country" placeholder="Country">
+								</div>
+								<div class="form-group">
+									<input class="input" type="tel" name="tel" placeholder="Telephone">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="primary-btn order-submit" value="Submit">Place order</button>
+								</div>
+								
+								<!-- <div class="form-group">
+									<div class="input-checkbox">
+										<input type="checkbox" id="create-account">
+										<label for="create-account">
+											<span></span>
+											Create Account?
+										</label>
+										<div class="caption">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+											<input class="input" type="password" name="password" placeholder="Enter Your Password">
+										</div>
+									</div>
+								</div> -->
 							</div>
-						</div>
+						</form>
 						<!-- /Billing Details -->
 
 						<!-- Shiping Details -->
-						<div class="shiping-details">
+						<!-- <div class="shiping-details">
 							<div class="section-title">
 								<h3 class="title">Shiping address</h3>
 							</div>
@@ -357,13 +357,13 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- /Shiping Details -->
 
 						<!-- Order notes -->
-						<div class="order-notes">
+						<!-- <div class="order-notes">
 							<textarea class="input" placeholder="Order Notes"></textarea>
-						</div>
+						</div> -->
 						<!-- /Order notes -->
 					</div>
 
@@ -410,7 +410,7 @@
 								<div><strong class="order-total"><?php echo number_format($tong); ?>VND</strong></div>
 							</div>
 						</div>
-						<div class="payment-method">
+						<!-- <div class="payment-method">
 							<div class="input-radio">
 								<input type="radio" name="payment" id="payment-1">
 								<label for="payment-1">
@@ -441,7 +441,7 @@
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="input-checkbox">
 							<input type="checkbox" id="terms">
 							<label for="terms">
@@ -449,7 +449,7 @@
 								I've read and accept the <a href="#">terms & conditions</a>
 							</label>
 						</div>
-						<a href="#" class="primary-btn order-submit">Place order</a>
+						<!-- <a href="#" class="primary-btn order-submit">Place order</a> -->
 					</div>
 					<!-- /Order Details -->
 				</div>
